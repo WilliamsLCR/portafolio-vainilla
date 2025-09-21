@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --color-primary: #0084FF;
   --color-font: #000;
@@ -10,10 +12,13 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #fff;
   color: var(--color-font);
+  justify-content: center;
 }
+
+/* NAVBAR */
 
 header {
   padding: 1rem 2rem;
@@ -27,11 +32,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(5, 5, 5, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
-  padding: 1.3rem;
+  padding: 1rem;
   border-radius: 2rem;
   width: 100%;
+  outline: solid var(--color-primary) 1px;
 }
 
 .blue-dot {
@@ -53,22 +59,103 @@ nav {
   display: none;
 }
 
+/* CONTENEDOR */
+
 .container {
-  margin-top: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  margin: 0 2rem;
 }
+
+/* INICIO */
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+}
+
+.inicio p {
+  padding-top: 4rem;
+  font-size: 1.2rem;
+}
+
+.inicio h1 {
+  font-size: 2.2rem;
+}
+
+.container-btn {
+  display: flex;
+}
+
+.inicio a {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline:solid var(--color-primary) 1px;
+    border-radius: 2rem;
+    width: 12rem;
+    height: 3rem;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--color-font);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  .inicio a:hover {
+    outline: none;
+    color: #fff;
+    background-color: var(--color-primary);
+  }
+
+/* SECCIONES */
+
+.seccion {
+  padding: 5rem 0;
+}
+
+.seccion h2 {
+}
+
+/* SVGs */
+
+.svg-span {
+  background-color: #000;
+  height: 300px;
+  width: 300px;
+}
+
+.svg-contenedor {
+  fill: #fff;
+  height: 200px;
+  width: 200px;
+}
+
+
+
+/* Vista en tables y PC */
 
 @media (min-width: 768px) {
 
+  html {
+    scroll-padding-top: 10rem;
+  }
+
+  /* NAVBAR */
+
   header {
-    justify-content: center;
     max-width: 1700px;
     margin: 0 auto;
+    right: 0px;
+    left: 0px;
   }
 
   nav {
-    display: flex;
     justify-content: space-between;
-    padding: 1.5rem 3rem;
+    padding: 1rem 3rem;
     max-width: 100%;
   }
 
@@ -92,8 +179,45 @@ nav {
     color: var(--color-primary);
   }
 
+  /* CONTENEDOR */
+
   .container {
-    margin-top: 9rem;
+    padding: 0 3rem;
+    margin-top: 6rem;
+    
+    max-width: 1700px;
+    margin: 0 auto;
+    right: 0px;
+    left: 0px;
   }
+
+  /* INICIO */
+
+  .inicio p {
+    font-size: 1.5rem;
+    padding-top: 15rem;
+  }
+
+  .inicio h1 {
+    font-size: 5rem;
+  }
+
+  .inicio a {
+    width: 15rem;
+    height: 3.5rem;
+    font-size: 1.3rem;
+  }
+
+  /* SECCION */
+
+  .seccion h2 {
+    font-size: 2rem;
+  }
+
+  .seccion p {
+    padding-top: 1rem;
+    max-width: 40rem;
+  }
+
 
 }

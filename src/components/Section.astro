@@ -1,9 +1,9 @@
 ---
 const {title, text} = Astro.props;
-const {id: tipo} = Astro.props;
+const {id: tipoId} = Astro.props;
 ---
 
-<section id={tipo} >
-    <h2>{title}</h2>
+<section class="seccion" id={tipoId} >
+    <h2>{title}<span class="blue-dot">.</span></h2>
     <p>{text}</p>
 </section>
