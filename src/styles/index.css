@@ -120,21 +120,6 @@ nav {
 .seccion h2 {
 }
 
-/* SVGs */
-
-.svg-span {
-  background-color: #000;
-  height: 300px;
-  width: 300px;
-}
-
-.svg-contenedor {
-  fill: #fff;
-  height: 200px;
-  width: 200px;
-}
-
-
 
 /* Vista en tables y PC */
 
